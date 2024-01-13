@@ -1,17 +1,16 @@
 import random
 
-print("Hellow welcome to the world rock paper scissors championship!!")
-print("let's start!!!")
-User=input("Choose your weapon:\n1.Rock.\n2.Paper.\n3.Scissors. :").lower()
-opt={"rock","paper","scissors"}
+print("Hello! Welcome to the Rock, Paper, Scissors Championship!!")
+print("Let's start!!!")
+user = input("Choose your weapon:\n1. Rock\n2. Paper\n3. Scissors: ").lower()
+opt = {"rock", "paper", "scissors"}
 computer = random.choice(list(opt))
-if User == computer :
-    print("It's a draw!!\ntry again")
 
-#User wins    
-elif User=="rock" and computer=="scissors" :
+if user == computer:
+    print("It's a draw!!\nTry again")
 
-    # Scissors
+# User wins
+elif user == "rock" and computer == "scissors":
     print("""
         _______
     ---'   ____)____
@@ -19,10 +18,9 @@ elif User=="rock" and computer=="scissors" :
         __________)
         (____)
     ---.__(___)
-    \nyou've win""")
-    
-elif User=="paper" and computer=="rock" :
-    #rock
+    \nYou've won""")
+
+elif user == "paper" and computer == "rock":
     print("""
         _______
     ---'   ____)
@@ -30,10 +28,9 @@ elif User=="paper" and computer=="rock" :
         (_____)
         (____)
     ---.__(___)
-    \nYou've win""")
-    
-elif User=="Scissors" and computer=="paper" :
-  # Paper
+    \nYou've won""")
+
+elif user == "scissors" and computer == "paper":
     print("""
         _______
     ---'    ____)____
@@ -41,11 +38,10 @@ elif User=="Scissors" and computer=="paper" :
             _______)
             _______)
     ---.__________)
-    \nYOu've win""")
-    
-#computer wins
-elif User=="scissors" and computer=="rock" :
-    
+    \nYou've won""")
+
+# Computer wins
+elif user == "scissors" and computer == "rock":
     print("""
       _______
     ---'   ____)
@@ -53,29 +49,27 @@ elif User=="scissors" and computer=="rock" :
         (_____)
         (____)
     ---.__(___)
-    \nyou've lost""") 
-    
-elif User=="rock" and computer=="paper" : 
-    # Paper
-    print("""
-        _______
-    ---'    ____)____
-            ______)
-            _______)
-            _______)
-    ---.__________)
-    \nYOu've lost""")
-    
-elif User=="paper" and computer=="scissors" :
-  # Paper
-    print("""
-        _______
-    ---'    ____)____
-            ______)
-            _______)
-            _______)
-    ---.__________)
-    \nYOu've lost""")
+    \nYou've lost""")
 
-else :
-    print("try again!")
+elif user == "rock" and computer == "paper":
+    print("""
+        _______
+    ---'    ____)____
+            ______)
+            _______)
+            _______)
+    ---.__________)
+    \nYou've lost""")
+
+elif user == "paper" and computer == "scissors":
+    print("""
+        _______
+    ---'    ____)____
+            ______)
+            _______)
+            _______)
+    ---.__________)
+    \nYou've lost""")
+
+else:
+    print("Invalid input! Please try again.")
